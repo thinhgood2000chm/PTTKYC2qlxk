@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cba3e7a2e0cd4d69813ef41396eeca9e" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.DiaDiem" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.HuongDanVien" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.KhachHang" Width="1.5" PointX="3.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.NhanVien" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.PhieuVe" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.TaiKhoan" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.TaiXe" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.XeKhach" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyXeKhachModel.FK__HuongDanV__MaHDV__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyXeKhachModel.FK__PhieuVe__MaKH__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyXeKhachModel.FK__PhieuVe__MaNVBV__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyXeKhachModel.FK__TaiXe__MaTX__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyXeKhachModel.FK__XeKhach__MaHDV__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyXeKhachModel.FK__XeKhach__MaTaiXe__164452B1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyXeKhachModel.ThongTinChuyenDi" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
