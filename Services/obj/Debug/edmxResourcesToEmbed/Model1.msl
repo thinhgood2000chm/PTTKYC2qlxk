@@ -96,5 +96,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ThongTinChuyenDis">
+      <EntityTypeMapping TypeName="QuanLyXeKhachModel.ThongTinChuyenDi">
+        <MappingFragment StoreEntitySet="ThongTinChuyenDi">
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="TenDD" ColumnName="TenDD" />
+          <ScalarProperty Name="MaCX" ColumnName="MaCX" />
+          <ScalarProperty Name="TenHDV" ColumnName="TenHDV" />
+          <ScalarProperty Name="MaHDV" ColumnName="MaHDV" />
+          <ScalarProperty Name="TenTX" ColumnName="TenTX" />
+          <ScalarProperty Name="MaTX" ColumnName="MaTX" />
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+          <ScalarProperty Name="stt" ColumnName="stt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

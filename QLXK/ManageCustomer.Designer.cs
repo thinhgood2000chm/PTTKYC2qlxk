@@ -30,8 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýHàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýTàiXếToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QLTTCDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +38,6 @@
             this.txtFind = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtStt = new System.Windows.Forms.Label();
             this.btnDeleteTextBox = new System.Windows.Forms.Button();
             this.txtMaKh = new System.Windows.Forms.TextBox();
             this.MaKH = new System.Windows.Forms.Label();
@@ -55,6 +53,8 @@
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtTenTK = new System.Windows.Forms.Label();
+            this.txtStt = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,8 +65,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýKháchHàngToolStripMenuItem,
-            this.quảnLýHàngHóaToolStripMenuItem,
-            this.quảnLýTàiXếToolStripMenuItem,
+            this.QLTTCDToolStripMenuItem,
             this.thôngTinTàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -80,17 +79,12 @@
             this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
             this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý khách hàng ";
             // 
-            // quảnLýHàngHóaToolStripMenuItem
+            // QLTTCDToolStripMenuItem
             // 
-            this.quảnLýHàngHóaToolStripMenuItem.Name = "quảnLýHàngHóaToolStripMenuItem";
-            this.quảnLýHàngHóaToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
-            this.quảnLýHàngHóaToolStripMenuItem.Text = "quản lý hướng dẫn viên";
-            // 
-            // quảnLýTàiXếToolStripMenuItem
-            // 
-            this.quảnLýTàiXếToolStripMenuItem.Name = "quảnLýTàiXếToolStripMenuItem";
-            this.quảnLýTàiXếToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.quảnLýTàiXếToolStripMenuItem.Text = "Quản lý tài xế";
+            this.QLTTCDToolStripMenuItem.Name = "QLTTCDToolStripMenuItem";
+            this.QLTTCDToolStripMenuItem.Size = new System.Drawing.Size(167, 20);
+            this.QLTTCDToolStripMenuItem.Text = "Quản lý thông tin chuyến đi";
+            this.QLTTCDToolStripMenuItem.Click += new System.EventHandler(this.QLTTCDToolStripMenuItem_Click);
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
@@ -113,6 +107,7 @@
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // btnFind
             // 
@@ -143,6 +138,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.txtStt);
+            this.panel2.Controls.Add(this.txtTenTK);
             this.panel2.Controls.Add(this.btnDeleteTextBox);
             this.panel2.Controls.Add(this.txtMaKh);
             this.panel2.Controls.Add(this.MaKH);
@@ -160,16 +156,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(370, 308);
             this.panel2.TabIndex = 14;
-            // 
-            // txtStt
-            // 
-            this.txtStt.AutoSize = true;
-            this.txtStt.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtStt.Location = new System.Drawing.Point(40, 14);
-            this.txtStt.Name = "txtStt";
-            this.txtStt.Size = new System.Drawing.Size(35, 13);
-            this.txtStt.TabIndex = 17;
-            this.txtStt.Text = "label6";
             // 
             // btnDeleteTextBox
             // 
@@ -308,6 +294,25 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // txtTenTK
+            // 
+            this.txtTenTK.AutoSize = true;
+            this.txtTenTK.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtTenTK.Location = new System.Drawing.Point(36, 14);
+            this.txtTenTK.Name = "txtTenTK";
+            this.txtTenTK.Size = new System.Drawing.Size(0, 13);
+            this.txtTenTK.TabIndex = 17;
+            // 
+            // txtStt
+            // 
+            this.txtStt.AutoSize = true;
+            this.txtStt.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtStt.Location = new System.Drawing.Point(320, 28);
+            this.txtStt.Name = "txtStt";
+            this.txtStt.Size = new System.Drawing.Size(29, 13);
+            this.txtStt.TabIndex = 18;
+            this.txtStt.Text = "label";
+            // 
             // ManageCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,8 +342,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýKháchHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýHàngHóaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýTàiXếToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem QLTTCDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNgườiDùngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
@@ -360,7 +364,8 @@
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label txtStt;
         private System.Windows.Forms.Label MaKH;
+        private System.Windows.Forms.Label txtTenTK;
+        private System.Windows.Forms.Label txtStt;
     }
 }

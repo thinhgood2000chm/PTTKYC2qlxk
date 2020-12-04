@@ -30,7 +30,8 @@ namespace QLXK
         }
         public void ClearData()
         {
-
+            txtStt.Text = "";
+            txtMaSo.Text = "";
             txtNameE.Text = "";
             txtPhoneEmp.Text = "";
             txtPosition.Text = "";
@@ -38,6 +39,10 @@ namespace QLXK
             dtDayWork.Value = DateTime.Now;
             radFemale.Checked = false;
             radMale.Checked = false;
+            LoadData();
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnChange.Enabled = true;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -60,7 +65,7 @@ namespace QLXK
                     MaNV = "NV" + Convert.ToString(temp.Count + 1),
                     TenNV = txtNameE.Text,
                     SDT = txtPhoneEmp.Text,
-                    GioiTinh = radFemale.Checked ? true : false,
+                    GioiTinh = radMale.Checked ? true : false,
                     ChucVu = txtPosition.Text,
                     NgaySinh = dtBirth.Value,
                     NgayVaoLam = dtDayWork.Value
@@ -119,6 +124,25 @@ namespace QLXK
             radFemale.Checked = !isMale;
             dtBirth.Value = birth;
             dtDayWork.Value = work;
+
+            // thiết lập enable các nút
+
+          
+   
+            if (txtMaSo.Text=="")
+            {
+                btnAdd.Enabled = true;
+                btnChange.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+                btnChange.Enabled = true;
+                btnDelete.Enabled = true;
+            }
+         
+          
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -128,6 +152,7 @@ namespace QLXK
             db.NhanViens.Remove(nv);
             db.SaveChanges();
             LoadData();
+            ClearData();
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -178,6 +203,40 @@ namespace QLXK
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("cách ghi dữ liệu đối với các trường:\n Hướng dẫn viên: HDV \n Tài xế: TX \n bán vé và nhân viên văn phòng ghi bình thường ");
+        }
+
+        private void cácSảnPhẩmĐãBánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListPhieuVe listPhieuVe = new ListPhieuVe();
+            listPhieuVe.Show();
+        }
+
+        private void txtNameE_TextChanged(object sender, EventArgs e)
+        {
+
+            //DUA VAO MÃ SÔ 
+            if (txtMaSo.Text.Equals(""))
+            {
+                btnAdd.Enabled = true;
+                btnChange.Enabled = false;
+                btnDelete.Enabled = false;
+
+            }
+        }
+
+        private void txtPhoneEmp_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void txtPosition_TextChanged(object sender, EventArgs e)
+        { 
+
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

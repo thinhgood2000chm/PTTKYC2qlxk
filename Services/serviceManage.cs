@@ -56,6 +56,11 @@ namespace Services
             var list = dataLocation.DiaDiems.ToList();
             return list;
         }
-        public List<T>
+        public List<ThongTinChuyenDi> getAllThongTin()
+        {
+            QuanLyXeKhachEntities dataInfo = new QuanLyXeKhachEntities();
+            var list = dataInfo.ThongTinChuyenDis.ToList();
+            return list;
+        }
     }
 }

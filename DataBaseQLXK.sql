@@ -112,19 +112,26 @@ insert into TaiKhoan values ('NV2','Bùi Lê Hồng Duyên','nhân viên văn ph
 --DESKTOP-ODSUTT5\SQLEXPRESS
 
 SELECT * FROM NhanVien
-delete from NhanVien
+delete from NhanVien 
 
 insert into NhanVien values ('NV1','Ngô Hồng Xinh','nhân viên bán vé','0','0832802655','09-28-2000','10-10-2022')
-insert into NhanVien values ('NV4','Bùi Lê Hồng Duyên','nhân viên văn phòng','0','0832802655','09-28-2000','10-10-2022')
-
-insert into NhanVien values ('NV2','Ngô Hồng Kim','hướng dẫn viên','0','0832802655','09-28-2000','10-10-2022')
-insert into NhanVien values ('NV3','Trần Công Minh','Tài xế','0','0832802655','09-28-2000','10-10-2022')
+insert into NhanVien values ('NV2','Bùi Lê Hồng Duyên','nhân viên văn phòng','0','0832802655','09-28-2000','10-10-2022')
+insert into NhanVien values ('NV3','Ngô Hồng Kim','HDV','0','0832802655','09-28-2000','10-10-2022')
+insert into NhanVien values ('NV4','Huỳnh Văn Thuận','TX','1','0832802655','09-28-2000','10-10-2022')
+insert into NhanVien values ('NV5','Huỳnh Văn Thanh','TX','1','0832806755','07-17-2000','10-10-2021')
+insert into NhanVien values ('NV6','Trần Công Minh','HDV','0','0832802655','09-28-2000','10-10-2022')
 
 --Insert into HuongDanVien()
 
-Insert into DiaDiem values('DD2','TPHCM- Cố Đô Huế','3000000')
+Insert into DiaDiem values('DD1','TPHCM- Cố Đô Huế','3000000')
+Insert into DiaDiem values('DD2','Hà Nội- Nha Trang','1500000')
 
-Insert into XeKhach values('XK1','NV2','NV3')
+
+
+Insert into XeKhach(MaXe) values('XK1')
+Insert into XeKhach(MaXe) values('XK2')
+Insert into XeKhach(MaXe) values('XK3')
+Insert into XeKhach(MaXe) values('XK4')
 
 select * from PhieuVe
 

@@ -88,6 +88,9 @@
     <Compile Include="TaiXe.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinChuyenDi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="XeKhach.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

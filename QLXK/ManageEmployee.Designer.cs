@@ -39,6 +39,8 @@
             this.txtFind = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtStt = new System.Windows.Forms.Label();
             this.bbtnClear = new System.Windows.Forms.Button();
             this.dtDayWork = new System.Windows.Forms.DateTimePicker();
@@ -61,8 +63,6 @@
             this.txtNameE = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -100,20 +100,21 @@
             // đăngKíToolStripMenuItem
             // 
             this.đăngKíToolStripMenuItem.Name = "đăngKíToolStripMenuItem";
-            this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngKíToolStripMenuItem.Text = "Đăng kí";
             this.đăngKíToolStripMenuItem.Click += new System.EventHandler(this.đăngKíToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // hiênToolStripMenuItem
             // 
             this.hiênToolStripMenuItem.Name = "hiênToolStripMenuItem";
-            this.hiênToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.hiênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.hiênToolStripMenuItem.Text = "Hiển thị thông tin ";
             this.hiênToolStripMenuItem.Click += new System.EventHandler(this.hiênToolStripMenuItem_Click);
             // 
@@ -122,6 +123,7 @@
             this.cácSảnPhẩmĐãBánToolStripMenuItem.Name = "cácSảnPhẩmĐãBánToolStripMenuItem";
             this.cácSảnPhẩmĐãBánToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.cácSảnPhẩmĐãBánToolStripMenuItem.Text = "Danh sách phiếu vé";
+            this.cácSảnPhẩmĐãBánToolStripMenuItem.Click += new System.EventHandler(this.cácSảnPhẩmĐãBánToolStripMenuItem_Click);
             // 
             // label7
             // 
@@ -178,15 +180,34 @@
             this.panel2.Size = new System.Drawing.Size(370, 382);
             this.panel2.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(219, 128);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 21);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "chú thích ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Tomato;
+            this.label9.Location = new System.Drawing.Point(37, 132);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "*HDV( hướng dẫn viên),TX( tài xế)";
+            // 
             // txtStt
             // 
             this.txtStt.AutoSize = true;
             this.txtStt.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtStt.Location = new System.Drawing.Point(37, 14);
+            this.txtStt.Location = new System.Drawing.Point(250, 14);
             this.txtStt.Name = "txtStt";
-            this.txtStt.Size = new System.Drawing.Size(35, 13);
+            this.txtStt.Size = new System.Drawing.Size(0, 13);
             this.txtStt.TabIndex = 21;
-            this.txtStt.Text = "label9";
             // 
             // bbtnClear
             // 
@@ -217,8 +238,8 @@
             // txtMaSo
             // 
             this.txtMaSo.AutoSize = true;
-            this.txtMaSo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.txtMaSo.Location = new System.Drawing.Point(37, 18);
+            this.txtMaSo.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtMaSo.Location = new System.Drawing.Point(92, 1);
             this.txtMaSo.Name = "txtMaSo";
             this.txtMaSo.Size = new System.Drawing.Size(0, 13);
             this.txtMaSo.TabIndex = 17;
@@ -239,6 +260,7 @@
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(200, 20);
             this.txtPosition.TabIndex = 11;
+            this.txtPosition.TextChanged += new System.EventHandler(this.txtPosition_TextChanged);
             // 
             // label6
             // 
@@ -350,6 +372,7 @@
             this.txtPhoneEmp.Name = "txtPhoneEmp";
             this.txtPhoneEmp.Size = new System.Drawing.Size(199, 20);
             this.txtPhoneEmp.TabIndex = 1;
+            this.txtPhoneEmp.TextChanged += new System.EventHandler(this.txtPhoneEmp_TextChanged);
             // 
             // txtNameE
             // 
@@ -357,6 +380,7 @@
             this.txtNameE.Name = "txtNameE";
             this.txtNameE.Size = new System.Drawing.Size(200, 20);
             this.txtNameE.TabIndex = 0;
+            this.txtNameE.TextChanged += new System.EventHandler(this.txtNameE_TextChanged);
             // 
             // panel1
             // 
@@ -374,26 +398,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(361, 353);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(219, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 21);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "chú thích ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Tomato;
-            this.label9.Location = new System.Drawing.Point(37, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "*HDV( hướng dẫn viên),TX( tài xế)";
             // 
             // ManageEmployee
             // 

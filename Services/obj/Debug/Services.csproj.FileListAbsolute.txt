@@ -10,3 +10,15 @@ E:\filehoctap\PTTKYC\đồ án cuối kì PTTKYC\QLXK\Services\obj\Debug\Service
 E:\filehoctap\PTTKYC\đồ án cuối kì PTTKYC\QLXK\Services\obj\Debug\Services.csproj.CopyComplete
 E:\filehoctap\PTTKYC\đồ án cuối kì PTTKYC\QLXK\Services\obj\Debug\Services.dll
 E:\filehoctap\PTTKYC\đồ án cuối kì PTTKYC\QLXK\Services\obj\Debug\Services.pdb
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\bin\Debug\Services.dll.config
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\bin\Debug\Services.dll
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\bin\Debug\Services.pdb
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\bin\Debug\EntityFramework.dll
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\bin\Debug\EntityFramework.SqlServer.dll
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\bin\Debug\EntityFramework.xml
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\bin\Debug\EntityFramework.SqlServer.xml
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\obj\Debug\Services.csprojAssemblyReference.cache
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\obj\Debug\Services.csproj.CopyComplete
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\obj\Debug\Services.dll
+E:\filehoctap\PTTKYC\pttkycQLXK-master\Services\obj\Debug\Services.pdb

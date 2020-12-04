@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListPhieuVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPhieuVe.Designer.cs">
+      <DependentUpon>ListPhieuVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,23 +80,17 @@
     <Compile Include="ManageCustomer.Designer.cs">
       <DependentUpon>ManageCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageDriver.cs">
+    <Compile Include="ManageInfoTrip.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageDriver.Designer.cs">
-      <DependentUpon>ManageDriver.cs</DependentUpon>
+    <Compile Include="ManageInfoTrip.Designer.cs">
+      <DependentUpon>ManageInfoTrip.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageEmployee.Designer.cs">
       <DependentUpon>ManageEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageTourGui.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageTourGui.Designer.cs">
-      <DependentUpon>ManageTourGui.cs</DependentUpon>
     </Compile>
     <Compile Include="Payment.cs">
       <SubType>Form</SubType>
@@ -106,6 +106,9 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ListPhieuVe.resx">
+      <DependentUpon>ListPhieuVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,14 +118,11 @@
     <EmbeddedResource Include="ManageCustomer.resx">
       <DependentUpon>ManageCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageDriver.resx">
-      <DependentUpon>ManageDriver.cs</DependentUpon>
+    <EmbeddedResource Include="ManageInfoTrip.resx">
+      <DependentUpon>ManageInfoTrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageEmployee.resx">
       <DependentUpon>ManageEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageTourGui.resx">
-      <DependentUpon>ManageTourGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>

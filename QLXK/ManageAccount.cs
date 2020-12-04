@@ -84,5 +84,38 @@ namespace QLXK
                 this.Close();
             }
         }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            Boolean flag = false;
+            string nameFind = txtFind.Text;
+            //int stt = Convert.ToInt32(txtFind.Text);
+            foreach (var tk in db.TaiKhoans)
+            {
+                if (tk.TenTK.Equals(nameFind) || tk.MaNV.Equals(nameFind) || tk.TenNV.Equals(nameFind))
+                {
+                    flag = true;
+                }
+            }
+            if (flag)
+            {
+
+                var list2 = db.TaiKhoans.Where(p => p.TenTK == nameFind || p.TenNV == nameFind || p.MaNV == nameFind).ToList();
+                dataGridView1.DataSource = list2;
+
+              
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtMaNV.Text = "";
+            txtNameEmp.Text = "";
+            txtPass.Text = "";
+            txtPosition.Text = "";
+            txtUserName.Text = "";
+            txtFind.Text = "";
+            LoadData();
+        }
     }
 }

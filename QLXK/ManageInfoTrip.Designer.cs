@@ -1,6 +1,6 @@
 ﻿namespace QLXK
 {
-    partial class ManageDriver
+    partial class ManageInfoTrip
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbIdTG = new System.Windows.Forms.ComboBox();
+            this.cbIdDriver = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbNameLocation = new System.Windows.Forms.ComboBox();
+            this.btnShowData = new System.Windows.Forms.Button();
+            this.cbNameTG = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbNameDriver = new System.Windows.Forms.ComboBox();
             this.cbIdVeh = new System.Windows.Forms.ComboBox();
             this.dtstar = new System.Windows.Forms.DateTimePicker();
@@ -47,25 +54,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbNameTG = new System.Windows.Forms.ComboBox();
-            this.btnShowData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(637, 52);
+            this.btnFind.Location = new System.Drawing.Point(727, 39);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
             this.btnFind.TabIndex = 25;
             this.btnFind.Text = "tìm kiếm";
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(513, 55);
+            this.txtFind.Location = new System.Drawing.Point(603, 42);
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(100, 20);
             this.txtFind.TabIndex = 24;
@@ -73,7 +78,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(427, 62);
+            this.label6.Location = new System.Drawing.Point(517, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 23;
@@ -82,13 +87,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(417, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(495, 85);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(311, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(327, 313);
             this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbIdTG);
+            this.panel1.Controls.Add(this.cbIdDriver);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.cbNameLocation);
             this.panel1.Controls.Add(this.btnShowData);
             this.panel1.Controls.Add(this.cbNameTG);
             this.panel1.Controls.Add(this.label7);
@@ -106,21 +116,92 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(31, 55);
+            this.panel1.Location = new System.Drawing.Point(29, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 344);
+            this.panel1.Size = new System.Drawing.Size(460, 412);
             this.panel1.TabIndex = 21;
+            // 
+            // cbIdTG
+            // 
+            this.cbIdTG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIdTG.FormattingEnabled = true;
+            this.cbIdTG.Location = new System.Drawing.Point(267, 79);
+            this.cbIdTG.Name = "cbIdTG";
+            this.cbIdTG.Size = new System.Drawing.Size(72, 21);
+            this.cbIdTG.TabIndex = 27;
+            // 
+            // cbIdDriver
+            // 
+            this.cbIdDriver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIdDriver.FormattingEnabled = true;
+            this.cbIdDriver.Location = new System.Drawing.Point(267, 41);
+            this.cbIdDriver.Name = "cbIdDriver";
+            this.cbIdDriver.Size = new System.Drawing.Size(72, 21);
+            this.cbIdDriver.TabIndex = 26;
+            this.cbIdDriver.SelectedIndexChanged += new System.EventHandler(this.cbIdDriver_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 163);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Tên địa điểm";
+            // 
+            // cbNameLocation
+            // 
+            this.cbNameLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNameLocation.FormattingEnabled = true;
+            this.cbNameLocation.Location = new System.Drawing.Point(85, 155);
+            this.cbNameLocation.Name = "cbNameLocation";
+            this.cbNameLocation.Size = new System.Drawing.Size(161, 21);
+            this.cbNameLocation.TabIndex = 24;
+            this.cbNameLocation.SelectedIndexChanged += new System.EventHandler(this.cbNameLocation_SelectedIndexChanged);
+            // 
+            // btnShowData
+            // 
+            this.btnShowData.Location = new System.Drawing.Point(358, 79);
+            this.btnShowData.Name = "btnShowData";
+            this.btnShowData.Size = new System.Drawing.Size(99, 23);
+            this.btnShowData.TabIndex = 21;
+            this.btnShowData.Text = "hiển thị dữ liệu";
+            this.btnShowData.UseVisualStyleBackColor = true;
+            this.btnShowData.Click += new System.EventHandler(this.btnShowData_Click);
+            // 
+            // cbNameTG
+            // 
+            this.cbNameTG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNameTG.FormattingEnabled = true;
+            this.cbNameTG.Location = new System.Drawing.Point(85, 81);
+            this.cbNameTG.Name = "cbNameTG";
+            this.cbNameTG.Size = new System.Drawing.Size(161, 21);
+            this.cbNameTG.TabIndex = 20;
+            this.cbNameTG.SelectedIndexChanged += new System.EventHandler(this.cbNameTG_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Tên HDV";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // cbNameDriver
             // 
+            this.cbNameDriver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNameDriver.FormattingEnabled = true;
-            this.cbNameDriver.Location = new System.Drawing.Point(79, 41);
+            this.cbNameDriver.Location = new System.Drawing.Point(85, 41);
             this.cbNameDriver.Name = "cbNameDriver";
             this.cbNameDriver.Size = new System.Drawing.Size(161, 21);
             this.cbNameDriver.TabIndex = 18;
+            this.cbNameDriver.SelectedIndexChanged += new System.EventHandler(this.cbNameDriver_SelectedIndexChanged);
             // 
             // cbIdVeh
             // 
+            this.cbIdVeh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIdVeh.FormattingEnabled = true;
             this.cbIdVeh.Location = new System.Drawing.Point(85, 118);
             this.cbIdVeh.Name = "cbIdVeh";
@@ -129,32 +210,33 @@
             // 
             // dtstar
             // 
-            this.dtstar.Location = new System.Drawing.Point(124, 152);
+            this.dtstar.Location = new System.Drawing.Point(124, 182);
             this.dtstar.Name = "dtstar";
             this.dtstar.Size = new System.Drawing.Size(200, 20);
             this.dtstar.TabIndex = 16;
             // 
             // dtEnd
             // 
-            this.dtEnd.Location = new System.Drawing.Point(124, 182);
+            this.dtEnd.Location = new System.Drawing.Point(124, 215);
             this.dtEnd.Name = "dtEnd";
             this.dtEnd.Size = new System.Drawing.Size(200, 20);
             this.dtEnd.TabIndex = 15;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(134, 271);
+            this.btnCancel.Location = new System.Drawing.Point(137, 316);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "thoát";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtStt
             // 
             this.txtStt.AutoSize = true;
-            this.txtStt.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtStt.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtStt.BackColor = System.Drawing.SystemColors.Control;
+            this.txtStt.ForeColor = System.Drawing.SystemColors.Control;
             this.txtStt.Location = new System.Drawing.Point(33, 33);
             this.txtStt.Name = "txtStt";
             this.txtStt.Size = new System.Drawing.Size(0, 13);
@@ -162,30 +244,33 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(115, 318);
+            this.btnClear.Location = new System.Drawing.Point(119, 359);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(105, 23);
+            this.btnClear.Size = new System.Drawing.Size(112, 23);
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(207, 233);
+            this.btnChange.Location = new System.Drawing.Point(213, 271);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(75, 23);
             this.btnChange.TabIndex = 11;
             this.btnChange.Text = "Sửa";
             this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(52, 233);
+            this.btnUpdate.Location = new System.Drawing.Point(55, 271);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Cập nhật ";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label5
             // 
@@ -209,7 +294,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 188);
+            this.label3.Location = new System.Drawing.Point(19, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 2;
@@ -218,7 +303,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 159);
+            this.label2.Location = new System.Drawing.Point(19, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 1;
@@ -233,46 +318,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã chuyến xe";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Tên HDV";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // cbNameTG
-            // 
-            this.cbNameTG.FormattingEnabled = true;
-            this.cbNameTG.Location = new System.Drawing.Point(79, 81);
-            this.cbNameTG.Name = "cbNameTG";
-            this.cbNameTG.Size = new System.Drawing.Size(161, 21);
-            this.cbNameTG.TabIndex = 20;
-            // 
-            // btnShowData
-            // 
-            this.btnShowData.Location = new System.Drawing.Point(267, 79);
-            this.btnShowData.Name = "btnShowData";
-            this.btnShowData.Size = new System.Drawing.Size(99, 23);
-            this.btnShowData.TabIndex = 21;
-            this.btnShowData.Text = "hiển thị dữ liệu";
-            this.btnShowData.UseVisualStyleBackColor = true;
-            this.btnShowData.Click += new System.EventHandler(this.btnShowData_Click);
-            // 
-            // ManageDriver
+            // ManageInfoTrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(872, 495);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "ManageDriver";
-            this.Text = "ManageDriver";
+            this.Name = "ManageInfoTrip";
+            this.Text = "ManageInfoTrip";
+            this.Load += new System.EventHandler(this.ManageInfoTrip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -305,5 +363,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnShowData;
         private System.Windows.Forms.ComboBox cbNameTG;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbNameLocation;
+        private System.Windows.Forms.ComboBox cbIdTG;
+        private System.Windows.Forms.ComboBox cbIdDriver;
     }
 }

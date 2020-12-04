@@ -78,6 +78,21 @@
     <Property Name="NgayBatDau" Type="datetime" />
     <Property Name="NgayKetThuc" Type="datetime" />
   </EntityType>
+  <EntityType Name="ThongTinChuyenDi">
+    <Key>
+      <PropertyRef Name="MaChuyen" />
+    </Key>
+    <Property Name="stt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaChuyen" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MaTX" Type="char" MaxLength="5" />
+    <Property Name="TenTX" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaHDV" Type="char" MaxLength="5" />
+    <Property Name="TenHDV" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaCX" Type="char" MaxLength="5" />
+    <Property Name="TenDD" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayBatDau" Type="datetime" />
+    <Property Name="NgayKetThuc" Type="datetime" />
+  </EntityType>
   <EntityType Name="XeKhach">
     <Key>
       <PropertyRef Name="MaXe" />
@@ -167,6 +182,7 @@
     <EntitySet Name="PhieuVe" EntityType="Self.PhieuVe" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiXe" EntityType="Self.TaiXe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThongTinChuyenDi" EntityType="Self.ThongTinChuyenDi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="XeKhach" EntityType="Self.XeKhach" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__HuongDanV__MaHDV__1FCDBCEB" Association="Self.FK__HuongDanV__MaHDV__1FCDBCEB">
       <End Role="NhanVien" EntitySet="NhanVien" />

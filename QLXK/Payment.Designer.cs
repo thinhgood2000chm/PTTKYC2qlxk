@@ -91,6 +91,7 @@
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // panel2
             // 
@@ -125,7 +126,7 @@
             // txtIdEmp
             // 
             this.txtIdEmp.AutoSize = true;
-            this.txtIdEmp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtIdEmp.ForeColor = System.Drawing.SystemColors.Control;
             this.txtIdEmp.Location = new System.Drawing.Point(444, 39);
             this.txtIdEmp.Name = "txtIdEmp";
             this.txtIdEmp.Size = new System.Drawing.Size(0, 13);
@@ -157,6 +158,7 @@
             // 
             // cbLocation
             // 
+            this.cbLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLocation.FormattingEnabled = true;
             this.cbLocation.Location = new System.Drawing.Point(158, 177);
             this.cbLocation.Name = "cbLocation";
@@ -165,6 +167,7 @@
             // 
             // txtNameEmp
             // 
+            this.txtNameEmp.Enabled = false;
             this.txtNameEmp.Location = new System.Drawing.Point(158, 107);
             this.txtNameEmp.Name = "txtNameEmp";
             this.txtNameEmp.Size = new System.Drawing.Size(231, 20);
@@ -189,6 +192,7 @@
             // 
             // cbCost
             // 
+            this.cbCost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCost.FormattingEnabled = true;
             this.cbCost.Location = new System.Drawing.Point(485, 177);
             this.cbCost.Name = "cbCost";
@@ -207,6 +211,7 @@
             // 
             // cbIDveh
             // 
+            this.cbIDveh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDveh.FormattingEnabled = true;
             this.cbIDveh.Location = new System.Drawing.Point(158, 145);
             this.cbIDveh.Name = "cbIDveh";
